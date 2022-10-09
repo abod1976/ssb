@@ -1,0 +1,1 @@
+web:gunicorn ssb-usn:app --preload --workers 1

@@ -1,0 +1,5 @@
+ falsk
+ pyjstat
+ requests
+ render_template
+ pandas

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Abdul@249939.usn</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+   
+  </head>
+  <body>
+  <h1> This is my work on task-Dr.Ali</h1>
+  <div id="container"></div>
+  <script>
+
+  let _categories ={{ year|tojson }};
+  let val_ringerike={{val_ringerike|tojson}}; 
+  let val_hole={{val_hole|tojson}}; 
+  let val_modum={{val_modum|tojson}}; 
+  let val_jevnaker={{val_jevnaker|tojson}}; 
+  Highcharts.chart('container', {
+
+    title: {
+        text: '09588: Flytting, etter statistikkvariabel, region og år'
+    },
+
+    subtitle: {
+        text: 'Nettoflytting i fire kommuner'
+    },
+
+    yAxis: {
+        title: {
+            text: 'Nettoflytting'
+        }
+    },
+
+    xAxis: {
+        accessibility: {
+            _categories: _categories
+        }
+    },
+
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2004
+        }
+    },
+
+    series: [{
+        name: 'Ringerike',
+        data:val_ringerike
+    }, {
+        name: 'Hole',
+        data: val_hole
+    }, {
+        name: 'Modum',
+        data: val_modum
+    }, {
+        name: 'Jevnaker',
+        data: val_jevnaker
+
+    }, 
+    ],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+  </script>      
+      
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
