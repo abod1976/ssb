@@ -1,5 +1,6 @@
- falsk
- pyjstat
- requests
- render_template
- pandas
+Flask==1.0.1
+gunicorn==19.7.1
+pyjstat
+requests
+pandas 
+ 
